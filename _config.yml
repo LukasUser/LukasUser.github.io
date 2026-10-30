@@ -1,0 +1,33 @@
+# Jekyll config for the /blog section of lukas-nilsson.com.
+# The portfolio (index.html and assets/ at the root) has no front matter,
+# so Jekyll copies it through untouched.
+title: Lukas Nilsson
+description: >-
+  Notes on quantitative finance, probability, and building things —
+  written while learning them.
+author: Lukas Nilsson
+url: "https://lukas-nilsson.com"
+baseurl: ""
+github_username: LukasUser
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+permalink: /blog/:year/:month/:title/
+
+feed:
+  path: /blog/feed.xml
+
+exclude:
+  - README.md
+  - scripts/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
